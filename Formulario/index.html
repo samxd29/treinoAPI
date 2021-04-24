@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax com JS Puro</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <main>
+        <form class="form">
+            <div class="navbar">Buscando CEP com requisição AJAX</div>
+            <div class="form-body">
+                <div class="l-row">
+                    <div class="formulario-cep">
+                        <label for="" class="form-cep">CEP</label>
+                        <div class="form-group">
+                            <input class="form-input" name="cep" id="cep" type="text" pattern="\d{5}\-\d{3}">
+                            <span class="form-buton"><button type="button" class="button-busque">Busque</button></span>
+                        </div>
+                    </div>
+                    <div class="form-endereco">
+                        <label for="endereco" class="form-text">Endereço</label>
+                        <input class="o-form__data" name="endereco" type="text">
+                    </div>
+                    <div class="form-numero">
+                        <label for="numero" class="numero">Numero</label>
+                        <input class="form-inputNum" name="numero" type="text">
+                    </div>
+                </div>
+                <div class="l-row">
+                    <div class="form-bairro">
+                        <label for="" class="label-bairro">Bairro</label>
+                        <input class="input-bairro" name="bairro" type="text">
+                    </div>
+                    <div class="form-complemento">
+                        <label for="" class="label-complemento">Complemento</label>
+                        <input class="input-complemento" name="complemento" type="text">
+                    </div>
+                </div>
+                <div class="l-row">
+                    <div class="form-cidade">
+                        <label for="" class="label-cidade">Cidade</label>
+                        <input class="input-cidade" name="cidade" type="text">
+                    </div>
+                    <div class="form-estado">
+                        <label for="" class="label-estado">Estado</label>
+                        <input class="input-estado" name="estado" type="text">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+</html>
