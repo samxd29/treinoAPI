@@ -9,15 +9,15 @@
 
 <body>
     <main>
-        <form class="form">
+        <form class="form" action="#">
             <div class="navbar">Buscando CEP com requisição AJAX</div>
             <div class="form-body">
                 <div class="l-row">
                     <div class="formulario-cep">
                         <label for="" class="form-cep">CEP</label>
                         <div class="form-group">
-                            <input class="form-input" name="cep" id="cep" type="text" pattern="\d{5}\-\d{3}">
-                            <span class="form-buton"><button type="button" class="button-busque">Busque</button></span>
+                            <input  name="cep" id="cep" type="text">
+                            <span><button id="botao" type="submit">Busque</button></span>
                         </div>
                     </div>
                     <div class="form-endereco">
@@ -41,12 +41,12 @@
                 </div>
                 <div class="l-row">
                     <div class="form-cidade">
-                        <label for="" class="label-cidade">Cidade</label>
-                        <input class="input-cidade" name="cidade" type="text">
+                        <label for="cidade"  class="label-cidade">Cidade</label>
+                        <input id="cidade" class="input-cidade" name="cidade" type="text">
                     </div>
                     <div class="form-estado">
-                        <label for="" class="label-estado">Estado</label>
-                        <input class="input-estado" name="estado" type="text">
+                        <label for="estado"  class="label-estado">Estado</label>
+                        <input id="estado" class="input-estado" name="estado" type="text">
                     </div>
                 </div>
             </div>

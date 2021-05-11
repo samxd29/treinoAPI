@@ -1,21 +1,24 @@
-
-
-  var botao = $(".button-busque");
-  var cep = $("#cep");
-  botao.on("click",function(){
+function buscaCep() {
+  var botao = $("#botao");
+  botao.on("click", function() {
+    var cep = $("#cep");
     $.ajax({
-      url:"http://viacep.com.br/ws/"+cep.val()+"/json/",
+      url: "http://viacep.com.br/ws/" + cep.val() + "/json/",
       type: "Get",
       datatype: "json",
-    }).done(function(dados){
-      $(".label-cidade").val(dados.logradouro);
-      $(".label-estado").val(dados.uf);
+    }).done(function (response) {
+      $("#cidade").val(response.localidade);
+      $("#estado").val(response.uf);
     });
-  })
+    
+  });
+}
 
+buscaCep();
 
 function viaCep() {
-  var url = "http://viacep.com.br/ws/"+cep+"/json/"; // URL
+  var cep = $("#cep");
+  var url = "http://viacep.com.br/ws/" + cep.val() + "/json/"; // URL
 
   var xhttp = new XMLHttpRequest();
   xhttp.open("GET", url, true);
